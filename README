@@ -1,0 +1,119 @@
+##########################################################################
+##                                                                      ##
+## TransDraw multi-user graphic editor                                  ##
+##                                                                      ##
+##  Copyright 1998 Walloon Region of Belgium.  All Rights Reserved.     ##
+##  The development of TransDraw is supported by the PIRATES project at ##
+##  the Université catholique de Louvain.  This file is subject to the  ##
+##  general TransDraw license.                                          ##
+##                                                                      ##
+##  Author: Donatien Grolaux                                            ##
+##                                                                      ##
+##########################################################################
+
+README file for building TransDraw
+----------------------------------
+
+The compiling facilities are provided only for the Unix platform.
+
+In the transdraw directory, type
+
+make              to compile all the binaries.
+maketrd           to link them into the TransDraw program.
+
+After these two steps, the Editor and TransDraw programs are ready to run.
+
+Additionaly, to compile the URLTooza program, type the command :
+
+ozc -x -z 9 URLTooza.oz
+
+------------
+File listing
+------------
+
+---------------------------
+For the TransDraw program :
+---------------------------
+
+Editor part :
+
+- selecttool.oz, SelectTool.oz 
+      Selection (arrow) tool. 
+      First file is the code, the second a stub for compilation.
+- freezetool.oz, FreezeTool.oz
+      Freeze and steal tools.
+- zoomtool.oz, ZoomTool.oz
+      Zoom tool.
+- standardtool.oz, StandardTool.oz
+      Circle and rectangle objects and drawing tools.
+- linetool.oz, LineTool.oz
+      Polyline/polygon objects and drawing tool.
+- texttoolv3.oz, TextTool.oz
+      Text object and drawing tool.
+- groupobj.oz, Group.oz
+      Group object.
+- arrowtool.oz, ArrowTool.oz
+      Curve/arrow objects and drawing tool.
+- browsetool.oz, BrowseTool.oz
+      Browser (hyperlink) tool.
+- tools.oz, Tools.oz
+      Draw and allow user to select the active tool above.
+- toolbar.oz, ToolBar.oz
+      Other gui tools (line width, color selection, freeze button,... )
+- statbar.oz, StatusBar.oz
+      Status bar at bottom of window.
+- menus.oz, Menus.oz
+      Menus definitions.
+- wand.oz, Chat.oz
+      Wands and chat objects.
+- CFun.oz, GifToBase64.oz
+      Compile gifs files into the code.
+- actionsclass.oz, Actions.oz
+      Treat events.
+- objlistclass.oz, Lists.oz
+      Objects for lists and arrays data type.
+- localizened.oz, Localize.oz
+      Allows transparent reference to builtin gifs and
+      allows transparent access to remote files across the network.
+- clientclass.oz, ClientClass.oz
+      Main client code (the transactional protocol is here)
+- textwindow.oz
+      Debug window.
+- nedtools/nedtools.oz, NedTools.oz
+      Standard dialogboxes definition.
+- nedtools/toolbar.oz, NedTB.oz
+      Toolbar of icons (below the menus) definition.
+
+Drawing server part :
+
+- serverclass.oz, ServerClass.oz
+      Main server object and server gui object.
+- server.oz
+      Server ressource linker.
+
+Others :
+
+- Ned.oz
+      Main program.
+- gifs/*
+      Gifs images included inside the code.
+- Makefile
+      Main Makefile for the Unix make command.
+- maketrd
+      Linker for bringing all the separately compiled chunks
+      into the TransDraw program.
+
+--------
+Others :
+--------
+
+- Editor.oz
+      Code for the Editor program.
+- URLTooza.oz
+      Code for the URLTooza program.
+- LICENSE
+      The license text.
+- README
+      This file
+
+Donatien Grolaux (ned@info.ucl.ac.be)

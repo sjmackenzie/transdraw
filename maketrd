@@ -1,0 +1,15 @@
+##########################################################################
+##                                                                      ##
+## TransDraw multi-user graphic editor                                  ##
+##                                                                      ##
+##  Copyright 1998 Walloon Region of Belgium.  All Rights Reserved.     ##
+##  The development of TransDraw is supported by the PIRATES project at ##
+##  the Université catholique de Louvain.  This file is subject to the  ##
+##  general TransDraw license.                                          ##
+##                                                                      ##
+##  Author: Donatien Grolaux                                            ##
+##                                                                      ##
+##########################################################################
+
+
+ozl Ned --include=Actions.ozf,Group.ozf,NedTB.ozf,StatusBar.ozf,ArrowTool.ozf,LineTool.ozf,NedTools.ozf,TextTool.ozf,Chat.ozf,Lists.ozf,SelectTool.ozf,ToolBar.ozf,ClientClass.ozf,Localize.ozf,Server.ozf,Tools.ozf,FreezeTool.ozf,BrowseTool.ozf,LocalizeNed.ozf,ServerClass.ozf,ZoomTool.ozf,GifToBase64.ozf,Menus.ozf,StandardTool.ozf,nedtools/RichText.ozf --compress=9 --executable -o TransDraw
